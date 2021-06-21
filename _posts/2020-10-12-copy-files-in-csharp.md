@@ -1,11 +1,12 @@
 ---
 title: 'Copy Files in C#'
 date: Mon, 12 Oct 2020 18:48:30 +0000
-categories:
-  - Computers
+categories: Computers
 tags: ['C#', 'Windows']
 layout: single
 classes: wide
+classes: wide
+author: Clayton Errington
 ---
 
 There are about 100 different ways to copy files on a computer system. Various scripts already have builtin ways like Windows default `copy` or `Copy-Item` in Powershell.
@@ -14,7 +15,7 @@ For a certain project we needed to copy files from one server to another and alr
 
 To begin we only need to use two assemblies, `System` and `System.IO` to get the `DirectoryInfo` and `FileInfo` classes. For this simple application I wanted to add some command line arguments so we add `string[] args` to our Main function.
 
-```
+```csharp
 static void Main(string[] args)
         {
             if(args.Length == 0)
@@ -33,14 +34,14 @@ static void Main(string[] args)
 
 If we do not have any arguments we give an example of how to use our CopyFiles program. Once we have arguments we call our internal `DirectoryCopy` function and specify our values. Let's begin our copy function.
 
-```
+```csharp
 private static void DirectoryCopy(string sourceDirName, string destDirName, bool copySubDirs)
         {}
 ```
 
 When we start we want to see if our source directory exists. We do this by creating a variable, `dir` and creating a `DirectoryInfo` object with it. We can then use this to verify the source directory and the sub contents. If the source directory does not exist we can `throw` the error to stop the program and report the error. Once the verify the source directory we want to check the destination and create the destination directory if it does not exist.
 
-```
+```csharp
 // Get the subdirectories for the specified directory.
 DirectoryInfo dir = new DirectoryInfo(sourceDirName);
 
@@ -61,7 +62,7 @@ if (!Directory.Exists(destDirName))
 
 Now that we have verified the source and destination directories we can begin creating the `FileInfo` object to copy the files.
 
-```
+```csharp
 // Get the files in the directory and copy them to the new location.
 FileInfo[] files = dir.GetFiles();
     foreach (FileInfo file in files)
@@ -75,7 +76,7 @@ FileInfo[] files = dir.GetFiles();
 
 If you were to stop here you'd find out that we'd only copy the parent directory and not the sub contents. on our parent function there is a bool for copySubDirs. Lets add a quick if statement to check this and continue.
 
-```
+```csharp
  // If copying subdirectories, copy them and their contents to new location.
     if (copySubDirs)
     {
@@ -95,7 +96,7 @@ Now we need to compile the C# file to an application and make it an executable. 
 
 To use this we'd need to be in a Command or Powershell Prompt and call CopyFiles.exe source_dir dest_dir
 
-```
+```shell
 CopyFiles.exe E:\temp E:\new
 ```
 

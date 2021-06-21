@@ -1,15 +1,17 @@
 ---
 title: 'Export images folder to HTML page'
 date: Sun, 01 Dec 2019 19:48:22 +0000
-draft: false
+categories: Python
 tags: ['Python']
+classes: wide
+author: Clayton Errington
 ---
 
 Often times we have a lot of images in a bunch of folders, and we need to go through the files to review them. I will show how we can use Python's [glob()](https://docs.python.org/3/library/glob.html), [enumerate()](https://docs.python.org/3/library/functions.html#enumerate), [os()](https://docs.python.org/3/library/os.html) library for files, and simple exporting data to an HTML file.
 
 First we need to import and open start our file for exporting.
 
-```
+```python
 import glob, os
 
 f = open("export.html","a+")
@@ -31,7 +33,7 @@ Opening a file with the attribute a+ will create a new file if it does not exist
 
 Lets start to gather details about our files by printing our total files to the console and the HTML file.
 
-```
+```python
 # set up variables and path
 fileCount = 0
 dirCount = 0
@@ -51,7 +53,7 @@ f.write('Number of files %d' % fileCount)
 
 We now have our file count, lets do something with it.
 
-```
+```python
 os.chdir(".")
 lst = glob.glob('\*\*/\*\*/\*.jpeg')
 for ind, smb in enumerate(lst):
@@ -72,7 +74,7 @@ Then we setup our for loop to write to our HTML file using tables. I wanted to h
 
 Once done, we need to close the HTML file properly, and the file. Then the HTML file looks similar to the below.
 
-```
+```html
 <html>
 <head>
     <title>Python IMG Export</title>  
@@ -84,20 +86,26 @@ Once done, we need to close the HTML file properly, and the file. Then the HTML 
         } 
     </style>  
 </head>  
-<body>Number of files 10<table><tr> 
-<td><img src='Images\2018\1.jpeg' /></td> 
-<td><img src='Images\2018\2.jpeg' /></td> 
-<td><img src='Images\2018\3.jpeg' /></td> 
-<td><img src='Images\2018\4.jpeg' /></td> 
-<td><img src='Images\2018\5.jpeg' /></td> 
-</tr><tr> 
-<td><img src='Images\2018\6.jpeg' /></td> 
-<td><img src='Images\2018\7.jpeg' /></td> 
-<td><img src='Images\2018\8.jpeg' /></td> 
-<td><img src='Images\2018\9.jpeg' /></td> 
-<td><img src='Images\2018\\0.jpeg' /></td> 
-</tr><tr> 
-</table></body></html>
+<body>
+Number of files 10
+<table>
+    <tr> 
+        <td><img src='Images\2018\1.jpeg' /></td> 
+        <td><img src='Images\2018\2.jpeg' /></td> 
+        <td><img src='Images\2018\3.jpeg' /></td> 
+        <td><img src='Images\2018\4.jpeg' /></td> 
+        <td><img src='Images\2018\5.jpeg' /></td> 
+    </tr>
+    <tr> 
+        <td><img src='Images\2018\6.jpeg' /></td> 
+        <td><img src='Images\2018\7.jpeg' /></td> 
+        <td><img src='Images\2018\8.jpeg' /></td> 
+        <td><img src='Images\2018\9.jpeg' /></td> 
+        <td><img src='Images\2018\\0.jpeg' /></td> 
+    </tr>
+</table>
+</body>
+</html>
 ```
 
 Some take away's for you to try is customize the title with the starting folder name and add arguments to allow for a different starting folder.

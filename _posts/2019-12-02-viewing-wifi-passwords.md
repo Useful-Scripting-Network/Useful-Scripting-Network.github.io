@@ -1,15 +1,17 @@
 ---
 title: 'Viewing Wifi Passwords'
 date: Mon, 02 Dec 2019 22:46:15 +0000
-draft: false
+categories: Powershell
 tags: ['Powershell', 'Windows']
+classes: wide
+author: Clayton Errington
 ---
 
 Did you forget your WiFi passwords and wish you could retrieve them? Or know what wireless networks you’ve connected to? With PowerShell we can do that pretty easily.
 
 This will show the current WiFi connection and then show the list of WiFi connections and their decrypted passwords. This will not show enterprise network passwords, only simple network types.
 
-```
+```powershell
 function Get-WifiPasswords{
   Write-Host "Current Wifi Connection:"
   netsh wlan show interfaces | Select-string '\sSSID'

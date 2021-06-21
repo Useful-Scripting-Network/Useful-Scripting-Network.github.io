@@ -3,6 +3,8 @@ title: 'Extracting files with Progress'
 date: Tue, 08 Dec 2020 22:21:38 +0000
 categories: Python
 tags: ['Python']
+classes: wide
+author: Clayton Errington
 ---
 
 With today's topic we will see how to extract files with Python and show progress as well.

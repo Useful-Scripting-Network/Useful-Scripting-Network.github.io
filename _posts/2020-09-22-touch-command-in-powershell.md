@@ -1,15 +1,17 @@
 ---
 title: 'Touch command in PowerShell'
 date: Tue, 22 Sep 2020 21:04:44 +0000
-draft: false
+categories: Powershell
 tags: ['Powershell']
+classes: wide
+author: Clayton Errington
 ---
 
 One of my favorite commands from the Linux terminal is the [touch](https://ss64.com/bash/touch.html) command. This is a way for users to create or modify files and their timestamp information. The following function is just a simple way to create an empty file or to update the Last Write Time attribute for a file.
 
 In many of my scripts or starting a new project I need to create a temp file or a new file before opening it to begin the task at hand.
 
-```
+```powershell
 # Add nix-like touch command
 Function touch
 {

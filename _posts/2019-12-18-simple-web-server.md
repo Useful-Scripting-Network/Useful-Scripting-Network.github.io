@@ -1,15 +1,17 @@
 ---
 title: 'Simple Web Server'
 date: Wed, 18 Dec 2019 22:58:00 +0000
-draft: false
+categories: Powershell
 tags: ['Computers', 'Powershell', 'Web', 'Windows']
+classes: wide
+author: Clayton Errington
 ---
 
 Powershell is very powerful when we can leverage .NET classes in our scripts. One simple task is to create a simple web server to render our results or server some simple HTML content.
 
 To get started we need to setup our HttpListener and prefix then start the new service.
 
-```
+```powershell
 # Http Server
 $http = [System.Net.HttpListener]::new() 
 
@@ -22,7 +24,7 @@ $http.Start()
 
 From there we can start listening on the port we specified, in this case 8080.
 
-```
+```powershell
 # Log ready message to terminal 
 if ($http.IsListening) {
     write-host " HTTP Server Ready!  " -f 'black' -b 'gre'
@@ -33,7 +35,7 @@ if ($http.IsListening) {
 
 Now that we have our server ready we need to start some basic routes and render a response and output stream. Each route is created with a GET request by default to get the url and page we need to display.
 
-```
+```powershell
 # ROUTE EXAMPLE 1
     # http://127.0.0.1/
     if ($context.Request.HttpMethod -eq 'GET' -and $context.Request.RawUrl -eq '/') {
@@ -57,7 +59,7 @@ Now that we have our server ready we need to start some basic routes and render 
 
 Then if we have a form we can create a POST HttpMethod to handle the submission of the form.
 
-```
+```powershell
 # ROUTE EXAMPLE 2
     # http://127.0.0.1/some/form'
     if ($context.Request.HttpMethod -eq 'GET' -and $context.Request.RawUrl -eq '/some/form') {
@@ -110,7 +112,7 @@ Then if we have a form we can create a POST HttpMethod to handle the submission 
 
 A good example we can use would be to display the files in a directory. Below we will setup a route called 'files' and get the list of the files and add them to a list element for the web page.
 
-```
+```powershell
 if ($context.Request.HttpMethod -eq 'GET' -and $context.Request.RawUrl -eq '/files') {
 
         # We can log the request to the terminal

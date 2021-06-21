@@ -1,8 +1,10 @@
 ---
 title: 'Scheduling file backups with Python'
 date: Sun, 19 Jan 2020 21:15:03 +0000
-draft: false
+categories: Python
 tags: ['Computers', 'Python']
+classes: wide
+author: Clayton Errington
 ---
 
 No matter what industry and position you are in, there are always file you need to backup. With so many options out there, creating your own solution is sometimes all you need. In this example we will utilize Python's dustutils and schedule module.
@@ -13,7 +15,7 @@ This is great, but next we want to make sure this runs on a timely manner not ju
 
 Lets begin!
 
-```
+```python
 import distutils.log
 import distutils.dir_util
 import schedule, time, click
@@ -24,7 +26,7 @@ dst_dir = "D:\backups\scripts"
 
 Now we have our imports and our source and destination defined. Lets create our job to copy the files.
 
-```
+```python
 def job():
     # Click's clear function is OS independent way to clear the console
     click.clear()
@@ -44,7 +46,7 @@ def job():
 
 Now we need to setup the schedule .
 
-```
+```python
 #set schedule
 schedule.every().hour.at(":00").do(job)
 
@@ -54,7 +56,7 @@ job()
 
 In order to run the scheduled task, we need to set a loop to run the pending tasks.
 
-```
+```python
 #run schedules
 while True:
     schedule.run_pending()

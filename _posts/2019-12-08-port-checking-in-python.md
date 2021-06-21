@@ -1,8 +1,10 @@
 ---
 title: 'Port Checking in Python'
 date: Sun, 08 Dec 2019 20:00:20 +0000
-draft: false
-tags: ['Featured', 'Python']
+categories: Python
+tags: ['Python']
+classes: wide
+author: Clayton Errington
 ---
 
 Python's [Sockets](https://docs.python.org/3/library/socket.html) library allows us to make connections to other hosts and we can use this to establish new sockets for our scripts or check if they are open on remote hosts.
@@ -11,7 +13,7 @@ With platforms like [Octopus](https://octopus.com/) for software delivery, we ne
 
 Today we will focus on the class itself and how to setup the hosts. You can take a look at Python's built in [logging](https://docs.python.org/3/library/logging.html) function if you'd like as well.
 
-```
+```python
 import socket, time, logging
 from colorama import init, Fore
 
@@ -64,13 +66,13 @@ In the class we call checkHost() to connect to the host and port and return if i
 
 To begin we need to create a new instance of the class to check port 443 on google.com.
 
-```
+```python
 google = PortCheck("google.com", 443)
 ```
 
 The variable, google, will now have our class attributes. To make sure we can call google.domain or google.port and this will return google.com and 443 respectfully in this case. To run the work, we call
 
-```
+```python
 google.portReturn()
 ```
 
@@ -80,7 +82,7 @@ Once called the class will run the portReturn function that checks our host and 
 
 Now, lets add a few more hosts.
 
-```
+```python
 # Setup hosts and ports
 google = PortCheck("google.com", 443)
 facebook = PortCheck("facebook.com", 443)

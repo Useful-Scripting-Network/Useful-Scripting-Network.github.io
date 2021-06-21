@@ -1,8 +1,10 @@
 ---
 title: 'Using PowerShell to Download Files'
 date: Tue, 08 Dec 2020 21:08:54 +0000
-draft: false
+categories: Powershell
 tags: ['Computers', 'Featured', 'Powershell', 'Windows']
+classes: wide
+author: Clayton Errington
 ---
 
 How else do you get files these days but downloading files. This could be for a deployment purpose or to just use the terminal to download a file without using your browser.
@@ -19,7 +21,7 @@ Just with all Requests objects there are plenty of ways to interact with a web p
 
 PowerShell needs to know the TLS Security Protocall to use and we'll start by making our URL and object.
 
-```
+```powershell
 # Set TLS support for Powershell and parse the JSON request
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 $npp = Invoke-WebRequest -UseBasicParsing 'https://api.github.com/repos/notepad-plus-plus/notepad-plus-plus/releases/latest' | ConvertFrom-Json
@@ -27,14 +29,14 @@ $npp = Invoke-WebRequest -UseBasicParsing 'https://api.github.com/repos/notepad-
 
 Now if we were to echo the `$npp` to the console we'd see the JSON object in a human readable method. Next we need to get our download URL and the name of the file as well. These can be found in the 4th child item for the 64bit installation file.
 
-```
+```powershell
 $dlUrl = $npp.assets[4].browser_download_url 
 $nppinstallfile = $npp.assets[4].name
 ```
 
 This will yield our URL mentioned above and the name of the executable file, npp.7.9.1.Installer.x64.exe. Since the GitHub API URL is always the latest, it'll get updated every time there's a new build and our script will continue to work. Now all we need is to download the installer.
 
-```
+```powershell
 # Start the download and save the file to the $nppinstallfile
 Invoke-WebRequest -UseBasicParsing $dlUrl -OutFile $nppinstallfile
 ```

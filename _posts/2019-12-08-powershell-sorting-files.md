@@ -1,8 +1,10 @@
 ---
 title: 'Powershell: Sorting Files'
 date: Tue, 15 Sep 2020 20:48:44 +0000
-draft: false
-tags: ['Featured', 'Powershell']
+categories: Powershell
+tags: ['Powershell']
+classes: wide
+author: Clayton Errington
 ---
 
 In a previous post I talked about how to use [Python to organize files](http://usefulscripting.network/computers/windows/automate-file-organizing/). Since most of my work is on a windows machine I thought I would add a Powershell based file organizer to my [Profile](http://usefulscripting.network/computers/windows/how-to-create-a-powershell-profile/). Lets begin!
@@ -11,14 +13,14 @@ We will look at a few modules for Powershell and how to use them together to get
 
 The following modules are the basis of what we are going to use in our function.
 
-```
+```powershell
 Get-ChildItem
 Move-Item
 ```
 
 `Get-ChildItem` is the equivilent to the `ls` command in Linux systems or `dir` in the Windows Command Prompt. With this we can list the files of a directory. First, lets setup our Function.
 
-```
+```powershell
 function Sort-Files {
     [CmdletBinding()]
     param (
@@ -30,7 +32,7 @@ function Sort-Files {
 
 We will want to have the option to pass a location to our function in case we need to run the same function multiple times, we wont have to keep changing the directory. Next up, lets get our files and extensions of the directory.
 
-```
+```powershell
 # Gather the extensions of the files in the folder path
 $extforfolders = Get-ChildItem $cwd -File | Select-Object Extension
 # Gather the list of files only
@@ -41,7 +43,7 @@ When running `Get-ChildItem` we can specify the directory for it to look at by p
 
 For this next part we'll want to create a list and then create the directories for each file extension we found in our directory.
 
-```
+```powershell
 # Create a new list to add the extensions to
 $extensions = New-Object Collections.Generic.List[String]
 
@@ -58,7 +60,7 @@ It was easier for this use case to bring in .NET and create a list for the exten
 
 Now that we have our directories made and extensions known, we can begin moving the files.
 
-```
+```powershell
 if($extensions.Count -gt 0){
         foreach($file in $files){
             try {

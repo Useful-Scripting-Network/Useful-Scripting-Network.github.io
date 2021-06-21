@@ -3,6 +3,8 @@ title: 'Uppercase user input'
 date: Fri, 29 Nov 2019 16:17:03 +0000
 categories: Powershell
 tags: ['Powershell']
+classes: wide
+author: Clayton Errington
 ---
 
 During user input we need to perform some string functions to put the name in a proper format because lets be honest, no one always types correctly.

@@ -1,21 +1,23 @@
 ---
 title: 'Working with Archive Files'
 date: Fri, 20 Mar 2020 23:12:50 +0000
-draft: false
+categories: Powershell
 tags: ['Powershell', 'Windows']
+classes: wide
+author: Clayton Errington
 ---
 
 No matter what we do we are always working with archiving files compressing or decompressing them. In this post we are going to take a look at creating a ZIP file with PowerShell at .NET.
 
 We can add these functions to our [PowerShell profile](http://usefulscripting.network/computers/windows/how-to-create-a-powershell-profile/) or within a simple script we can reuse. To begin we will need to add a .NET assembly to the script.
 
-```
+```powershell
 Add-Type -As System.IO.Compression.FileSystem
 ```
 
 We have just added the .NET assembly from the System.IO class and asked for the Compression.FileSystem subclass. This is what will do the heavy lifting later. We will create two functions, one to compress and one to decompress. Each will have their own command-line arguments to help with processing.
 
-```
+```powershell
 function New-ZipFile {
 	#.Synopsis
 	#  Create a new zip file, optionally appending to an existing zip...
@@ -81,7 +83,7 @@ Once the process is complete we close the archive file stram and then list the c
 
 Along with compressing files, we also need to decompress files so lets begin to make the decompress function. Since we are in the same script file we do not need to reimport the .NET module.
 
-```
+```powershell
 function Expand-ZipFile {
 	#.Synopsis
 	#  Expand a zip file, ensuring it's contents go to a single folder ...
@@ -157,7 +159,7 @@ We begin by opening the file with the .NET assembly in Read mode, then create a 
 
 To make these functions easier to use we can create aliases for them.
 
-```
+```powershell
 # Add the aliases ZIP and UNZIP
 new-alias zip new-zipfile
 
@@ -168,7 +170,7 @@ Now that the aliases are in place we can simply call zip or unzip respectfully. 
 
 Usage of the functions is as follows:
 
-```
+```powershell
 zip .\filename.zip C:\files\folder-to-zip
 
 unzip .\filename.zip

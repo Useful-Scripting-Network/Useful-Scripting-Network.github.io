@@ -1,11 +1,11 @@
 ---
 title: 'Encrypting Files'
 date: Wed, 27 Nov 2019 21:08:03 +0000
-draft: false
 categories: Python
 tags: ['Python', 'Security']
 layout: single
 classes: wide
+author: Clayton Errington
 ---
 
 With python there are many modules to use for encryption. Today we will see how to generate a key and encrypt a file. Encryption is used when encoding a file in a way that only the authorized people can decrypt it to access the data.
@@ -14,13 +14,13 @@ We will take a look at how we can encrypt files using Python using the [cryptogr
 
 To begin, we will need to install cryptography
 
-```
+```shell
 pip install cryptography
 ```
 
 Now start a new filecrypt.py file and start with
 
-```
+```python
 from cryptography.fernet import Fernet
 import os
 ```
@@ -28,7 +28,7 @@ import os
 Generating a key
 ----------------
 
-```
+```python
 def write_key():
     """
     Generates a key and save it into a file
@@ -42,7 +42,7 @@ Fernet is a symmetric encryption method that ensures your encrypted message cann
 
 Next we need to load the key so we can use it in our encryption method. Since this key is saved as key.key we can reuse this same key for multiple projects if wanted.
 
-```
+```python
 def load_key():
     """
     Loads the key from the current directory named `key.key`
@@ -52,7 +52,7 @@ def load_key():
 
 To start the encryption method we need to generate a Fernet object and read the file into Python.
 
-```
+```python
 def encrypt(filename, key):
     """
     Given a filename (str) and key (bytes), it encrypts the file and write it
@@ -65,7 +65,7 @@ def encrypt(filename, key):
 
 Next we begin encrypting the data and write the file. This will overwrite the data in the original file, so be careful when using this on important information. At the end we have renamed the file to add .enc to it so we know the file is encrypted.
 
-```
+```python
     # encrypt data
     encrypted_data = f.encrypt(file_data)
     # write the encrypted file
@@ -78,7 +78,7 @@ Next we begin encrypting the data and write the file. This will overwrite the da
 
 Now that we have encrypted our file, we will need to be able to decrypt it. We start the same process of creating our Fernet object, opening our encrypted file, the passing the decrypt command, and writing the decrypted bytes back to our file.
 
-```
+```python
 def decrypt(filename, key):
     """
     Given a filename (str) and key (bytes), it decrypts the file and write it
@@ -99,7 +99,7 @@ def decrypt(filename, key):
 
 Now try to run our script by opening your Python terminal and launching our file. In our full code we have added some arguments to generate our key and encrypt and decrypt our file.
 
-```
+```shell
 python filecrypt.py -e test.txt
 python filecrypt.py -d test.txt.enc
 ```

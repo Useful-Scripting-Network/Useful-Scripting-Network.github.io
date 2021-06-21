@@ -1,8 +1,10 @@
 ---
 title: 'Python Virtual Environments'
 date: Thu, 07 Nov 2019 13:07:34 +0000
-draft: false
+categories: Python
 tags: ['Python']
+classes: wide
+author: Clayton Errington
 ---
 
 There comes a time in writing [Python](https://www.python.org/) programs where you need to test something, work on an update to a module, or test a new module in a sandbox. Luckily there is a helpful process to use called Virtual Environments. Running your project in a virtual environment will allow you to keep modules separate from your global module set if you do not want to keep everything all together or need to work specifically on a new project. 

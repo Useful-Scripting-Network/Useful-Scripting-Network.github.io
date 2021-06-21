@@ -5,6 +5,7 @@ categories: Computers
 tags: ['Computers', 'Linux', 'Python', 'Windows']
 layout: single
 classes: wide
+author: Clayton Errington
 ---
 
 On our systems we use a lot of files and end up with a lot of clutter. Sometimes it can be hard to look through all those files and determine what is needed. Maybe we need to break up the files but file type and go through them that way. Or we need all the files and need to organize them.
@@ -22,7 +23,7 @@ Windows Batch File Automation
 
 The Windows Batch method loops through all the files in the current directory and will create a directory for the file extension and then move that file to the folder. Let's take a look...
 
-```
+```shell
 @echo off
 
 rem For each file in your folder
@@ -43,7 +44,7 @@ First the batch script will loop through all the file files and assign the file 
 
 The move command will output "1 file(s) moved". and does not tell us which ones by name. We could update this by adding the following line before the move command.
 
-```
+```shell
 echo moving %%a to %%~xa
 ```
 
@@ -58,7 +59,7 @@ The Python method is a good option for cross operating systems. We will use the 
 
 For the overview we change Python's path to the current directory and list all the files only and add to an array.
 
-```
+```python
 # For listing files from the folder. 
 
 l = [f for f in os.listdir(cwd) if os.path.isfile(f)]  
@@ -77,7 +78,7 @@ for  value in l:
 
 Then we split the extension and add this to a new list. With the new list we check if the folder path exists for that extension and if not, create the folder. Once folders are made, we begin to move files with '''shutil'''.
 
-```
+```python
 # We remove duplicate values from  
 # list l2 and checks if directory  
 # exists otherwise we create new one 
@@ -109,7 +110,7 @@ for files, extension in zip(l, l2):
 
 Once all complete we count the frequency of each extension and print "X files were moved to XFolder".
 
-```
+```python
 def CountFrequency(my_list): 
     # Creating an empty dictionary  
     freq = {} 
