@@ -42,3 +42,9 @@ archivenav:
         url: /tags/
       - title: "Posts by Category"
         url: /categories/
+        
+   - title: Helpful links
+    children:
+      - title: "GitHub"
+        url: "https://github.com/Useful-Scripting-Network"
+      - title: "Posts by Tag"
