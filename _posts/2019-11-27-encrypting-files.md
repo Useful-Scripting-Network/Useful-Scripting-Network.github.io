@@ -2,7 +2,7 @@
 title: 'Encrypting Files'
 date: Wed, 27 Nov 2019 21:08:03 +0000
 categories: Python
-tags: ['Python', 'Security']
+tags: ['Security']
 layout: single
 classes: wide
 author: Clayton Errington

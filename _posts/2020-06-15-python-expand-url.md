@@ -2,7 +2,7 @@
 title: 'Python: Expand URL'
 date: Mon, 15 Jun 2020 04:34:22 +0000
 categories: Python
-tags: ['Python', 'Web']
+tags: ['Web']
 classes: wide
 author: Clayton Errington
 ---

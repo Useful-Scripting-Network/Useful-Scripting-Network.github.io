@@ -2,7 +2,7 @@
 title: 'Working with Archive Files'
 date: Fri, 20 Mar 2020 23:12:50 +0000
 categories: Powershell
-tags: ['Powershell', 'Windows']
+tags: ['Windows']
 classes: wide
 author: Clayton Errington
 ---

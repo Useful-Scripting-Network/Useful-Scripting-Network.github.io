@@ -2,7 +2,7 @@
 title: 'Extracting files with Progress'
 date: Tue, 08 Dec 2020 22:21:38 +0000
 categories: Python
-tags: ['Python']
+tags: ['Automation', 'filesystem']
 classes: wide
 author: Clayton Errington
 ---

@@ -2,7 +2,7 @@
 title: 'Scheduling file backups with Python'
 date: Sun, 19 Jan 2020 21:15:03 +0000
 categories: Python
-tags: ['Computers', 'Python']
+tags: ['Python', 'Automation']
 classes: wide
 author: Clayton Errington
 ---

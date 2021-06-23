@@ -1,8 +1,8 @@
 ---
 title: 'Simple Web Server'
 date: Wed, 18 Dec 2019 22:58:00 +0000
-categories: Powershell
-tags: ['Computers', 'Powershell', 'Web', 'Windows']
+categories: Web
+tags: ['Web']
 classes: wide
 author: Clayton Errington
 ---

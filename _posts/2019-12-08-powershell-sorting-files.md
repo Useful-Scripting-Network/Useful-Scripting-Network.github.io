@@ -2,7 +2,7 @@
 title: 'Powershell: Sorting Files'
 date: Tue, 15 Sep 2020 20:48:44 +0000
 categories: Powershell
-tags: ['Powershell']
+tags: ['Automation']
 classes: wide
 author: Clayton Errington
 ---

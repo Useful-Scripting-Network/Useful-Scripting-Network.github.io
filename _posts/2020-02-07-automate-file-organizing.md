@@ -1,8 +1,8 @@
 ---
 title: 'Automate File Organizing'
 date: Fri, 07 Feb 2020 19:16:31 +0000
-categories: Computers
-tags: ['Computers', 'Linux', 'Python', 'Windows']
+categories: Python
+tags: ['Linux', 'Windows']
 layout: single
 classes: wide
 author: Clayton Errington

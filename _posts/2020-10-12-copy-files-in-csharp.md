@@ -1,10 +1,9 @@
 ---
 title: 'Copy Files in C#'
 date: Mon, 12 Oct 2020 18:48:30 +0000
-categories: Computers
-tags: ['C#', 'Windows']
+categories: csharp
+tags: ['Windows']
 layout: single
-classes: wide
 classes: wide
 author: Clayton Errington
 ---

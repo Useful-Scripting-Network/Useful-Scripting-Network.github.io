@@ -3,6 +3,8 @@ permalink: /about/
 title: "About"
 toc: true
 layout: single
+sidebar:
+  nav: "archivenav"
 ---
 
 # Who are we?

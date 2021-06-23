@@ -2,7 +2,7 @@
 title: 'Using PowerShell to Download Files'
 date: Tue, 08 Dec 2020 21:08:54 +0000
 categories: Powershell
-tags: ['Computers', 'Featured', 'Powershell', 'Windows']
+tags: ['Powershell', 'Windows']
 classes: wide
 author: Clayton Errington
 ---

@@ -6,3 +6,39 @@ main:
     url: /categories/
   - title: "Archive"
     url: /archive/
+#  - title: Archive
+#    sublinks:
+#      - title: By Tag
+#        url: /tags/
+#      - title: By Category
+#        url: /categories/
+#      - title: By Year
+#        url: /year-archive/
+
+
+archivenav:
+  - title: Categories
+    children:
+      - title: "Computers"
+        url: /categories/computers/
+      - title: "C#"
+        url: /categories/csharp/
+      - title: "Javascript"
+        url: /categories/javascript/
+      - title: "Powershell"
+        url: /categories/powershell/
+      - title: "Security"
+        url: /categories/security/
+      - title: "Python"
+        url: /categories/python/
+      - title: "Web"
+        url: /categories/web/    
+
+  - title: Archives
+    children:
+      - title: "Posts by Year"
+        url: /archive/
+      - title: "Posts by Tag"
+        url: /tags/
+      - title: "Posts by Category"
+        url: /categories/

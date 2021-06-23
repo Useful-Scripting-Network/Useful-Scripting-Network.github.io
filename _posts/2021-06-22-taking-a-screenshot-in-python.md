@@ -2,8 +2,9 @@
 title: Taking A Screenshot In Python
 date: 2021-06-22T01:13:59.499Z
 template: "post"
-category: Python
-description: Quick demonstartion of how to take a screenshot using Python
+category: "Python"
+tags: ["Computers", "Automation"]
+excerpt: Quick demonstartion of how to take a screenshot using Python
 classes: wide
 author: Clayton Errington
 ---
