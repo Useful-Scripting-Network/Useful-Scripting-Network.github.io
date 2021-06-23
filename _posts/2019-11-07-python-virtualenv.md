@@ -13,28 +13,28 @@ There comes a time in writing [Python](https://www.python.org/) programs where y
 
 1. Before we go further lets ensure we have everything setup. We need to run ```python --version``` from our terminal You should get a response back like
 
-```
-[shell]Python 3.7.4[/shell]
+```shell
+Python 3.7.4
 ```
 
 If you do not have Python you can download it from [Python.org](https://www.python.org/downloads/) or using [Chocolatey](https://chocolatey.org/) as well by doing
 
-```
-[shell]choco install python[/shell]
+```shell
+choco install python
 ```
 
 2. Now that Python is installed, lets upgrade PIP. [PIP](https://pip.pypa.io/en/stable/) is the package installer for Python. This is what we use to install other Python modules. Run
 
-```
-[py]python -m pip install -U pip[/py]
+```python
+python -m pip install -U pip
 ```
 
 in our terminal and pip will check if there is an update to the pip module.
 
 3. Checking on virtualenv Run
 
-```
-[py]pip install virtualenv[/py]
+```python
+pip install virtualenv
 ```
 
 This will check to see if virtualenv is installed and if not, pip will install it.
@@ -43,14 +43,14 @@ This will check to see if virtualenv is installed and if not, pip will install i
 
 Now that we have our pre-requisites in place we can create our virtual environment. In our terminal lets create a new folder, and change to that directory.
 
-```
-[shell]mkdir testapp cd testapp[/shell]
+```shell
+mkdir testapp cd testapp
 ```
 
 Now in our testapp folder run the following command and it will generate a base copy of Python and other setup items.
 
-```
-[py]python virtualenv [/py]
+```python
+python virtualenv 
 ```
 
 This will create the following folders for use in the new virtual environment. Include, Lib, Scripts, tcl, License.txt
@@ -59,32 +59,32 @@ This will create the following folders for use in the new virtual environment. I
 
 Now we will need to activate our virtual environment by doing the following for Windows 
 
-```
-[powershell]scripts\activate[/powershell]
+```powershell
+scripts\activate
 ```
 
 or
 
-```
-[powershell]source /bin/activate [/powershell]
+```powershell
+source /bin/activate
 ```
 
 You will notice your terminal now switched to
 
-```
-[shell] (testapp) PS C:\scripts\testapp> [/shell]
+```shell 
+(testapp) PS C:\scripts\testapp> 
 ```
 
 If you were to run
 
-```
-[py]pip install requests[/py]
+```python
+pip install requests
 ```
 
 this will install a new version of this module for this virtual environment. If you needed to leave the virtual environment and stay in the terminal you can always type
 
-```
-[code]deactivate[/code]
+```shell
+deactivate
 ```
 
 and this will return you to your normal terminal.
@@ -97,12 +97,12 @@ A Virtual Environment is a great tool to keep the dependencies required by diffe
 
 To keep your environments consistent you can "freeze" your current state of packages by typing to following.
 
-```
-[py]python pip freeze >> requirements.txt[/py]
+```python
+python pip freeze >> requirements.txt
 ```
 
 This will create a requirements.txt file that you can use for later for easier development or sharing of your Python project with others. The other users will just need to install ther requirements.
 
-```
-[py]python pip install -r requirements.txt [/py]
+```python
+python pip install -r requirements.txt 
 ```

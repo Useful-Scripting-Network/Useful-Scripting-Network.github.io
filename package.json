@@ -34,6 +34,8 @@
     "build:js": "npm run uglify && npm run add-banner",
     "serve": "bundle exec jekyll serve",
     "update": "bundle update",
-    "newpost": "plop"
+    "newpost": "plop",
+    "git": "git add . && git commit -m",
+    "postgit": "git push --all"
   }
 }

@@ -15,27 +15,48 @@ module.exports = function(plop) {
             type: "input",
             name: "title",
             message: "Title of post:",
+            validate: function (value) {
+              if ((/.+/).test(value)) { return true; }
+              return 'title is required';
+            }
           },
           {
             type: "input",
             name: "description",
             message: "Description of post:",
+            validate: function (value) {
+              if ((/.+/).test(value)) { return true; }
+              return 'Description is required';
+            }
           },
           {
             type: "list",
             name: "category",
             message: "Category:",
-            choices: ["Tutorial", "Reflection"],
-            filter: function(val) {
-              return val.toLowerCase()
-            },
+            choices: ["Computers", "Python", "Powershell"],
+            //filter: function(val) {
+            //  return val.toLowerCase()
+            //},
+            validate: function (value) {
+              if ((/.+/).test(value)) { return true; }
+              return 'Main Category is required';
+            }
+          },
+          {
+            type: "input",
+            name: "author",
+            message: "Your name:",
+            validate: function (value) {
+              if ((/.+/).test(value)) { return true; }
+              return 'Author name is required';
+            }
           },
         ],
         actions: [
           {
             type: "add",
             path: `_posts/${shortDate}-{{dashCase title}}.md`,
-            templateFile: "_posts/blog-post.hbs",
+            templateFile: "_posts/blog-post.md.hbs",
           },
         ],
       })
