@@ -44,7 +44,7 @@ archivenav:
         url: /categories/
         
    - title: Helpful links
-    children:
+     children:
       - title: "GitHub"
         url: "https://github.com/Useful-Scripting-Network"
       - title: "Posts by Tag"
