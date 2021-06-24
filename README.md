@@ -58,7 +58,7 @@ Please choose just one Categories. Once the post file is created, you can add ta
 
 If this is you first time to submit a blog post also edit the `_data/authors.ymal` file and include the follow, as you with: 
 
-```toml
+``` yaml
 # /_data/authors.yml
 
 Billy Rick: # This is the same name used in the posts section. They need to match
