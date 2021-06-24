@@ -36,6 +36,7 @@
     "update": "bundle update",
     "newpost": "plop",
     "git": "git add . && git commit -m",
-    "postgit": "git push --all"
+    "postgit": "git push --all",
+    "postinstall": "bundle install"
   }
 }

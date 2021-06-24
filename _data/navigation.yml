@@ -6,18 +6,10 @@ main:
     url: /categories/
   - title: "Archive"
     url: /archive/
-#  - title: Archive
-#    sublinks:
-#      - title: By Tag
-#        url: /tags/
-#      - title: By Category
-#        url: /categories/
-#      - title: By Year
-#        url: /year-archive/
 
-
+# main links
 archivenav:
-  - title: Categories
+  - title: "Categories"
     children:
       - title: "Computers"
         url: /categories/computers/
@@ -32,9 +24,9 @@ archivenav:
       - title: "Python"
         url: /categories/python/
       - title: "Web"
-        url: /categories/web/    
+        url: /categories/web/
 
-  - title: Archives
+  - title: "Archives"
     children:
       - title: "Posts by Year"
         url: /archive/
@@ -42,9 +34,9 @@ archivenav:
         url: /tags/
       - title: "Posts by Category"
         url: /categories/
-        
-   - title: Helpful links
-     children:
+
+  - title: "Useful links"
+    children:
       - title: "GitHub"
         url: "https://github.com/Useful-Scripting-Network"
-      - title: "Posts by Tag"
+      - title: "Posts by Tag"        

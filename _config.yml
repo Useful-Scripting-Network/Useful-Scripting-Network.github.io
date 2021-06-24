@@ -17,8 +17,8 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 # Site Settings
 locale                   : "en-US"
 title                    : "Useful Scripting Network"
-title_separator          : "-"
-subtitle                 : # site tagline that appears below site title in masthead
+title_separator          : "|"
+subtitle                 : "Even the small difference helps"
 name                     : "Useful Scripting Network"
 description              : "A network for developers to post some useful tips for others."
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"

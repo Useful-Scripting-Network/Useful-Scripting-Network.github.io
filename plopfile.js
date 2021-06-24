@@ -33,7 +33,7 @@ module.exports = function(plop) {
             type: "list",
             name: "category",
             message: "Category:",
-            choices: ["Computers", "Python", "Powershell"],
+            choices: ["Computers", "C#", "Javascript", "Powershell", "Python", "Security", "Web"],
             //filter: function(val) {
             //  return val.toLowerCase()
             //},
