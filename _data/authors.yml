@@ -6,6 +6,16 @@ Clayton Errington:
     - label: "Website"
       icon: "fas fa-fw fa-link"
       url: "https://claytonerrington.com"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/cjerrington"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/cjerrington/"
+    - label: "Mastodon"
+      icon: "fab fa-fw fa-mastodon"
+      url: "https://mstdn.social/@cjerrington"
+      
 
 Cornelius Fiddlebone:
   name        : "Cornelius Fiddlebone"
