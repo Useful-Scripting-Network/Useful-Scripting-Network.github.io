@@ -2,7 +2,7 @@
 title: 'Get System Up time'
 date: Mon, 17 Feb 2020 22:54:13 +0000
 layout: single
-categories: Powershell
+categories: PowerShell
 tags: ['Windows']
 classes: wide
 author: Clayton Errington

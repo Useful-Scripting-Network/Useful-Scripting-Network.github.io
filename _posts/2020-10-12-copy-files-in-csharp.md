@@ -8,7 +8,7 @@ classes: wide
 author: Clayton Errington
 ---
 
-There are about 100 different ways to copy files on a computer system. Various scripts already have builtin ways like Windows default `copy` or `Copy-Item` in Powershell.
+There are about 100 different ways to copy files on a computer system. Various scripts already have builtin ways like Windows default `copy` or `Copy-Item` in PowerShell.
 
 For a certain project we needed to copy files from one server to another and already built a C#/WPF application for the UI. I needed to be able to copy an entire folder to a new server and created the following console application.
 
@@ -93,7 +93,7 @@ Once you are done we will want to ensure our project has the right framework set
 
 Now we need to compile the C# file to an application and make it an executable. In Visual Studios, just choose Build and then Build Solution. Find your new EXE and you can take this where ever you'd like.
 
-To use this we'd need to be in a Command or Powershell Prompt and call CopyFiles.exe source_dir dest_dir
+To use this we'd need to be in a Command or PowerShell Prompt and call CopyFiles.exe source_dir dest_dir
 
 ```shell
 CopyFiles.exe E:\temp E:\new

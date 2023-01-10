@@ -1,8 +1,8 @@
 ---
 title: 'Using PowerShell to Download Files'
 date: Tue, 08 Dec 2020 21:08:54 +0000
-categories: Powershell
-tags: ['Powershell', 'Windows']
+categories: PowerShell
+tags: ['PowerShell', 'Windows']
 classes: wide
 author: Clayton Errington
 ---
@@ -19,10 +19,10 @@ From the Get-Help command we read the description.
 
 Just with all Requests objects there are plenty of ways to interact with a web page from the terminal but today we'll go over how to download files. I will use the popular text editor Notepad++ and the following link: https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v7.9.1/npp.7.9.1.Installer.exe
 
-PowerShell needs to know the TLS Security Protocall to use and we'll start by making our URL and object.
+PowerShell needs to know the TLS Security Protocol to use and we'll start by making our URL and object.
 
 ```powershell
-# Set TLS support for Powershell and parse the JSON request
+# Set TLS support for PowerShell and parse the JSON request
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 $npp = Invoke-WebRequest -UseBasicParsing 'https://api.github.com/repos/notepad-plus-plus/notepad-plus-plus/releases/latest' | ConvertFrom-Json
 ```

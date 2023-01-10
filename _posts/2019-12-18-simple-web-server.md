@@ -7,7 +7,7 @@ classes: wide
 author: Clayton Errington
 ---
 
-Powershell is very powerful when we can leverage .NET classes in our scripts. One simple task is to create a simple web server to render our results or server some simple HTML content.
+PowerShell is very powerful when we can leverage .NET classes in our scripts. One simple task is to create a simple web server to render our results or server some simple HTML content.
 
 To get started we need to setup our HttpListener and prefix then start the new service.
 
@@ -45,7 +45,7 @@ Now that we have our server ready we need to start some basic routes and render 
 
         # the html/data you want to send to the browser
         # you could replace this with: [string]$html = Get-Content "C:\some\path\index.html" -Raw
-        [string]$html += "<h1>A Powershell Webserver</h1><p>home page</p>" 
+        [string]$html += "<h1>A PowerShell Webserver</h1><p>home page</p>" 
         
         #resposed to the request
         $buffer = [System.Text.Encoding]::UTF8.GetBytes($html) # convert htmtl to bytes
@@ -68,7 +68,7 @@ Then if we have a form we can create a POST HttpMethod to handle the submission 
         write-host "$($context.Request.UserHostAddress)  =>  $($context.Request.Url)" -f 'mag'
 
         [string]$html += "
-        <h1>A Powershell Webserver</h1>
+        <h1>A PowerShell Webserver</h1>
         <form action='/some/post' method='post'>
             <p>A Basic Form</p>
             <p>fullname</p>
@@ -100,7 +100,7 @@ Then if we have a form we can create a POST HttpMethod to handle the submission 
         Write-Host $FormContent -f 'Green'
 
         # the html/data
-        [string]$html += "<h1>A Powershell Webserver</h1><p>Post Successful!</p><p>$FormContent</p>" 
+        [string]$html += "<h1>A PowerShell Webserver</h1><p>Post Successful!</p><p>$FormContent</p>" 
 
         #resposed to the request
         $buffer = [System.Text.Encoding]::UTF8.GetBytes($html)
@@ -121,7 +121,7 @@ if ($context.Request.HttpMethod -eq 'GET' -and $context.Request.RawUrl -eq '/fil
         # the html/data you want to send to the browser
         # you could replace this with: [string]$html = Get-Content "C:\some\path\index.html" -Raw
 		$files = (Get-ChildItem -Path C:\scripts\powershell\* -Include *.ps1).Name
-        [string]$html += "<h1>A Powershell Webserver</h1><p>Files in $($PSScriptRoot)</p><ul>" 
+        [string]$html += "<h1>A PowerShell Webserver</h1><p>Files in $($PSScriptRoot)</p><ul>" 
 		foreach ($file in $files){
 			[string]$html += "<li>$file</li>"
 		}
@@ -138,6 +138,6 @@ if ($context.Request.HttpMethod -eq 'GET' -and $context.Request.RawUrl -eq '/fil
 
 This is a quick and simple way to make a web server to display the information needed to present. Some downfalls to this are the server needs to be restarted if the script file changes or the files in the directory when rendering the web page.
 
-Each request that is brought to the Powershell web site will be logged in the console as well. We will see the requester IP and the page they hit as well.
+Each request that is brought to the PowerShell web site will be logged in the console as well. We will see the requester IP and the page they hit as well.
 
-The full code is on our [GitHub](https://github.com/Useful-Scripting-Network/Powershell/blob/master/simpleWebServer.ps1) account as well.
+The full code is on our [GitHub](https://github.com/Useful-Scripting-Network/PowerShell/blob/master/simpleWebServer.ps1) account as well.

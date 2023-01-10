@@ -1,8 +1,8 @@
 ---
 title: 'Uppercase user input'
 date: Fri, 29 Nov 2019 16:17:03 +0000
-categories: Powershell
-tags: ['Powershell']
+categories: PowerShell
+tags: ['PowerShell']
 classes: wide
 author: Clayton Errington
 ---
@@ -40,6 +40,6 @@ Write-Host "First Name: $givenname"
 Write-Host "Last Name: $sn"
 ```
 
-When you enter the name john smith, Powershell will change it to John Smith for us.
+When you enter the name john smith, PowerShell will change it to John Smith for us.
 
-View the source code on our [Github Repo](https://github.com/Useful-Scripting-Network/Powershell/blob/master/Uppercase.ps1).
+View the source code on our [Github Repo](https://github.com/Useful-Scripting-Network/PowerShell/blob/master/Uppercase.ps1).

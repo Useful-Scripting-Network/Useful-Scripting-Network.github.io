@@ -1,15 +1,15 @@
 ---
-title: Updating File Programmically
+title: Updating File Programmatically
 date: 2021-07-02T01:13:59.499Z
 template: "post"
 category: "Computers"
 tags: ["filesystem", "Automation"]
-excerpt: Quick demonstartion of how to update a file programatically
+excerpt: Quick demonstration of how to update a file programatically
 classes: wide
 author: Clayton Errington
 ---
 
-When working with text based files there might be a time to udpate the contents. Powershell has a `Get-Content` Commandlet that gathers the content of a file and renders it to the console or saved in a variable. Once we get the content we can then manipulate it and save that back out. 
+When working with text based files there might be a time to update the contents. PowerShell has a `Get-Content` Commandlet that gathers the content of a file and renders it to the console or saved in a variable. Once we get the content we can then manipulate it and save that back out. 
 
 ## So whats the goal? 
 

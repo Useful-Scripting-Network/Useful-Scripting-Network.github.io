@@ -1,8 +1,8 @@
 ---
 title: 'Touch command in PowerShell'
 date: Tue, 22 Sep 2020 21:04:44 +0000
-categories: Powershell
-tags: ['Powershell']
+categories: PowerShell
+tags: ['PowerShell']
 classes: wide
 author: Clayton Errington
 ---

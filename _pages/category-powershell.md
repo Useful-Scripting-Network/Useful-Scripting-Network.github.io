@@ -1,8 +1,8 @@
 ---
-title: Powershell
+title: PowerShell
 layout: category
-permalink: /categories/powershell/
-taxonomy: Powershell
+permalink: /categories/powerShell/
+taxonomy: PowerShell
 entries_layout: grid
 sidebar:
   nav: "archivenav"

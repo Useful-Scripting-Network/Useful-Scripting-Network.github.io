@@ -1,7 +1,7 @@
 ---
 title: 'How to Create a PowerShell Profile'
 date: Tue, 03 Mar 2020 19:16:14 +0000
-categories: Powershell
+categories: PowerShell
 tags: ['Windows']
 classes: wide
 author: Clayton Errington
