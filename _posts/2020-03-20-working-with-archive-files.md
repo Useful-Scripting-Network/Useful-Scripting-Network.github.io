@@ -1,7 +1,7 @@
 ---
 title: 'Working with Archive Files'
 date: Fri, 20 Mar 2020 23:12:50 +0000
-categories: Powershell
+categories: PowerShell
 tags: ['Windows']
 classes: wide
 author: Clayton Errington
@@ -176,4 +176,4 @@ zip .\filename.zip C:\files\folder-to-zip
 unzip .\filename.zip
 ```
 
-You can find the full script on our [GitHub page](https://github.com/Useful-Scripting-Network/Powershell/blob/master/zipping.ps1).
+You can find the full script on our [GitHub page](https://github.com/Useful-Scripting-Network/PowerShell/blob/master/zipping.ps1).

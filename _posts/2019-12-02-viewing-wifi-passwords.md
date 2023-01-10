@@ -1,7 +1,7 @@
 ---
 title: 'Viewing Wifi Passwords'
 date: Mon, 02 Dec 2019 22:46:15 +0000
-categories: Powershell
+categories: PowerShell
 tags: ['Windows']
 classes: wide
 author: Clayton Errington

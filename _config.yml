@@ -105,7 +105,7 @@ author:
       # url: "mailto:your.name@email.com"
     - label: "Website"
       icon: "fas fa-fw fa-link"
-      url: "https://usfulscripting.network"
+      url: "https://usefulscripting.network"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/Useful-Scripting-Network"
