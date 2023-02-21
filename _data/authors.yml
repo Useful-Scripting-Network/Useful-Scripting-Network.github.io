@@ -15,7 +15,18 @@ Clayton Errington:
     - label: "Mastodon"
       icon: "fab fa-fw fa-mastodon"
       url: "https://mstdn.social/@cjerrington"
-      
+
+Tom Yates:
+  name        : "Tom Yates"
+  bio         : "*'I am working, it's just automated'*"
+  avatar      : "/assets/tyates-tw.png"
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/mortensummer/"
+    - label: "Mastodon"
+      icon: "fab fa-fw fa-mastodon"
+      url: "https://masto.ai/@mortensummer"  
 
 Cornelius Fiddlebone:
   name        : "Cornelius Fiddlebone"
